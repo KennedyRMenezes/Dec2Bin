@@ -3,6 +3,7 @@
 const convertNum = function(){
 
     let inputValue = Number(document.querySelector('.input--').value);
+    let inputV = inputValue;
     console.log(inputValue);
     let showArea = document.querySelector('.result');
 
@@ -27,7 +28,10 @@ const convertNum = function(){
     const bin = Number(bin1.join(''));
     console.log(bin);
 
-    showArea.textContent = bin;
+    showArea.textContent = `${inputV} (10) --> ${bin} (2)`;
+
+    document.querySelector('.input--').value = '';
+
 };
 
 document.querySelector('.btn').addEventListener('click', convertNum);
